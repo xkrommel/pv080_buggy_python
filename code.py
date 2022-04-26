@@ -1,7 +1,7 @@
 import subprocess
-import yaml
+#import yaml
 import hashlib
-import flask
+#import flask
 
 
 def transcode_file(request, filename):
@@ -29,10 +29,10 @@ def fetch_website(urllib_version, url):
     url_data = http.request('GET', url)
     return url_data.data
 
+#@app.route("/")
+#def index():
+#    version = flask.request.args.get("urllib_version")
+#    url = flask.request.args.get("url")
+#    return fetch_website(version, url)
 
-
-@app.route("/")
-def index():
-    version = flask.request.args.get("urllib_version")
-    url = flask.request.args.get("url")
-    return fetch_website(version, url)
+fetch_website(1.17, "https://www.google.com/search?q=urllib+version&rlz=1C1GCEB_enCZ994CZ997&oq=urllib+version&aqs=chrome..69i57j0i19l2j0i19i22i30l7.5560j0j4&sourceid=chrome&ie=UTF-8")
